@@ -13,8 +13,8 @@ read ip
 
 echo "Input Password:"
 read password
-command="ss-server -s ${ip} -p 443 -l 1080 -k ${password} -m aes-256-cfb"
-ss-server -s ${ip} -p 443  -k ${password} -m aes-256-cfb
+command="nohup ss-server -s ${ip} -p 443 -l 1080 -k ${password} -m aes-256-cfb &"
+nohup ss-server -s ${ip} -p 443  -k ${password} -m aes-256-cfb &
 echo -e "\n\n"
 echo "Information:"
 echo "Server Ip:${ip}"
